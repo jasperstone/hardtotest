@@ -17,13 +17,14 @@
 	// }
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "dotnet restore",
+	"postCreateCommand": "dotnet restore && dotnet build",
 
 	// Configure tool-specific properties.
 	"customizations": {
         "vscode": {
             "extensions": [
-				"ms-dotnettools.csdevkit"
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.vscodeintellicode-csharp"
 			]
         }
     }
