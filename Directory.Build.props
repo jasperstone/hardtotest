@@ -1,0 +1,16 @@
+<Project>
+
+  <!-- Central Package Management -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <!-- Global code coverage settings -->
+  <PropertyGroup Condition="'$(IsTestProject)' == 'true'">
+    <!-- Exclude test projects from code coverage -->
+    <ExcludeFromCodeCoverage>true</ExcludeFromCodeCoverage>
+    <!-- Alternative: Use Coverlet exclusions -->
+    <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute</ExcludeByAttribute>
+    <ExcludeByFile>**/bin/**/*;**/obj/**/*;**/*Tests.cs</ExcludeByFile>
+  </PropertyGroup>
+</Project>
