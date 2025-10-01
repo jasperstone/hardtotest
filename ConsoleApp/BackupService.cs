@@ -4,9 +4,10 @@ public class BackupService
 {
     public bool Backup()
     {
-        if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
+        var dow = DateTime.Now.DayOfWeek;
+        if (dow == DayOfWeek.Saturday)
         {
-            Console.WriteLine("Backing up data...");
+            Console.WriteLine("Backing up");
             return true;
         }
         return false;
